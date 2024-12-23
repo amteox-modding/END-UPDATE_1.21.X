@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "item": "tutorialmod:pale_planks"
+    }
+  },
+  "pattern": [
+    "X X",
+    " X "
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pale_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tutorialmod:pale_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "tutorialmod:pale_wood"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pale_log"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "tutorialmod:pale_wood"
+    ]
+  }
+}

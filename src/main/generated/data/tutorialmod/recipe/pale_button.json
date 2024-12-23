@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "X": {
+      "item": "tutorialmod:pale_planks"
+    }
+  },
+  "pattern": [
+    "X"
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:pale_button"
+  }
+}
