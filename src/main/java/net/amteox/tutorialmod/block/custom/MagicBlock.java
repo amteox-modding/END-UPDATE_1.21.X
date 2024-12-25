@@ -1,6 +1,6 @@
 package net.amteox.tutorialmod.block.custom;
 
-import net.amteox.tutorialmod.block.ModBlock;
+import net.amteox.tutorialmod.block.ModBlocks;
 import net.amteox.tutorialmod.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -35,7 +35,7 @@ public class MagicBlock extends Block {
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
 
         if (entity instanceof ItemEntity itemEntity) {
-            if (itemEntity.getStack().getItem() == ModBlock.ENDERIUM_ORE.asItem()) {
+            if (itemEntity.getStack().getItem() == ModBlocks.ENDERIUM_ORE.asItem()) {
 
                 itemEntity.setStack(new ItemStack(ModItems.ENDERIUM_SHARD, itemEntity.getStack().getCount()));
 

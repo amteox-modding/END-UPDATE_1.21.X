@@ -2,26 +2,20 @@ package net.amteox.tutorialmod.datagen;
 
 
 import net.amteox.tutorialmod.TutorialMod;
-import net.amteox.tutorialmod.block.ModBlock;
+import net.amteox.tutorialmod.block.ModBlocks;
 import net.amteox.tutorialmod.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
-import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
-import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
-import net.minecraft.item.MinecartItem;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.recipe.ShapelessRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
 
-import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
@@ -51,8 +45,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 //                .offerTo(exporter);
 
             ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ENDERIUM_INGOT,9)
-                    .input(ModBlock.ENDERIUM_BLOCK)
-                    .criterion(hasItem(ModBlock.ENDERIUM_BLOCK),conditionsFromItem(ModBlock.ENDERIUM_BLOCK))
+                    .input(ModBlocks.ENDERIUM_BLOCK)
+                    .criterion(hasItem(ModBlocks.ENDERIUM_BLOCK),conditionsFromItem(ModBlocks.ENDERIUM_BLOCK))
                     .offerTo(exporter, Identifier.of(TutorialMod.MOD_ID, "enderium_ingot_from_block"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ENDERIUM_INGOT,1)
@@ -70,7 +64,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
 
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlock.ENDERIUM_BLOCK,1)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ENDERIUM_BLOCK,1)
                 .pattern("RRR")
                 .pattern("RRR")
                 .pattern("RRR")
@@ -78,7 +72,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.ENDERIUM_INGOT),conditionsFromItem(ModItems.ENDERIUM_INGOT))
                 .offerTo(exporter);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlock.END_STONE_PILLAR,1)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.END_STONE_PILLAR,1)
                 .pattern("R")
                 .pattern("R")
                 .input('R', Blocks.END_STONE_BRICK_SLAB)
@@ -153,31 +147,31 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.STICK,4)
                 .pattern("R")
                 .pattern("R")
-                .input('R', ModBlock.PALE_PLANKS)
-                .criterion(hasItem(ModBlock.PALE_PLANKS),conditionsFromItem(ModBlock.PALE_PLANKS))
+                .input('R', ModBlocks.PALE_PLANKS)
+                .criterion(hasItem(ModBlocks.PALE_PLANKS),conditionsFromItem(ModBlocks.PALE_PLANKS))
                 .offerTo(exporter);
 
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.BOWL)
                 .pattern("X X")
                 .pattern(" X ")
-                .input('X', ModBlock.PALE_PLANKS)
-                .criterion(hasItem(ModBlock.PALE_PLANKS),conditionsFromItem(ModBlock.PALE_PLANKS))
+                .input('X', ModBlocks.PALE_PLANKS)
+                .criterion(hasItem(ModBlocks.PALE_PLANKS),conditionsFromItem(ModBlocks.PALE_PLANKS))
                 .offerTo(exporter);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlock.PALE_WOOD,3)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PALE_WOOD,3)
                 .pattern("XX")
                 .pattern("XX")
-                .input('X', ModBlock.PALE_LOG)
-                .criterion(hasItem(ModBlock.PALE_LOG),conditionsFromItem(ModBlock.PALE_LOG))
+                .input('X', ModBlocks.PALE_LOG)
+                .criterion(hasItem(ModBlocks.PALE_LOG),conditionsFromItem(ModBlocks.PALE_LOG))
                 .offerTo(exporter);
 
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlock.STRIPPED_PALE_WOOD,3)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STRIPPED_PALE_WOOD,3)
                 .pattern("XX")
                 .pattern("XX")
-                .input('X', ModBlock.STRIPPED_PALE_LOG)
-                .criterion(hasItem(ModBlock.STRIPPED_PALE_LOG),conditionsFromItem(ModBlock.STRIPPED_PALE_LOG))
+                .input('X', ModBlocks.STRIPPED_PALE_LOG)
+                .criterion(hasItem(ModBlocks.STRIPPED_PALE_LOG),conditionsFromItem(ModBlocks.STRIPPED_PALE_LOG))
                 .offerTo(exporter);
 
 
@@ -185,32 +179,32 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
 
 
-        FabricRecipeProvider.createFenceRecipe(ModBlock.PALE_FENCE, Ingredient.ofItems(ModBlock.PALE_PLANKS.asItem()))
-                .criterion(hasItem(ModBlock.PALE_PLANKS),conditionsFromItem(ModBlock.PALE_PLANKS))
+        FabricRecipeProvider.createFenceRecipe(ModBlocks.PALE_FENCE, Ingredient.ofItems(ModBlocks.PALE_PLANKS.asItem()))
+                .criterion(hasItem(ModBlocks.PALE_PLANKS),conditionsFromItem(ModBlocks.PALE_PLANKS))
                 .offerTo(exporter);
 
-        FabricRecipeProvider.createFenceGateRecipe(ModBlock.PALE_FENCE_GATE, Ingredient.ofItems(ModBlock.PALE_PLANKS.asItem()))
-                .criterion(hasItem(ModBlock.PALE_PLANKS),conditionsFromItem(ModBlock.PALE_PLANKS))
+        FabricRecipeProvider.createFenceGateRecipe(ModBlocks.PALE_FENCE_GATE, Ingredient.ofItems(ModBlocks.PALE_PLANKS.asItem()))
+                .criterion(hasItem(ModBlocks.PALE_PLANKS),conditionsFromItem(ModBlocks.PALE_PLANKS))
                 .offerTo(exporter);
 
-        FabricRecipeProvider.createStairsRecipe(ModBlock.PALE_STAIRS, Ingredient.ofItems(ModBlock.PALE_PLANKS.asItem()))
-                .criterion(hasItem(ModBlock.PALE_PLANKS),conditionsFromItem(ModBlock.PALE_PLANKS))
+        FabricRecipeProvider.createStairsRecipe(ModBlocks.PALE_STAIRS, Ingredient.ofItems(ModBlocks.PALE_PLANKS.asItem()))
+                .criterion(hasItem(ModBlocks.PALE_PLANKS),conditionsFromItem(ModBlocks.PALE_PLANKS))
                 .offerTo(exporter);
 
-        FabricRecipeProvider.createSlabRecipe(RecipeCategory.BUILDING_BLOCKS,ModBlock.PALE_SLAB, Ingredient.ofItems(ModBlock.PALE_PLANKS.asItem()))
-                .criterion(hasItem(ModBlock.PALE_PLANKS),conditionsFromItem(ModBlock.PALE_PLANKS))
+        FabricRecipeProvider.createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PALE_SLAB, Ingredient.ofItems(ModBlocks.PALE_PLANKS.asItem()))
+                .criterion(hasItem(ModBlocks.PALE_PLANKS),conditionsFromItem(ModBlocks.PALE_PLANKS))
                 .offerTo(exporter);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlock.PALE_BUTTON)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.PALE_BUTTON)
                 .pattern("X")
-                .input('X', ModBlock.PALE_PLANKS)
-                .criterion(hasItem(ModBlock.PALE_PLANKS),conditionsFromItem(ModBlock.PALE_PLANKS))
+                .input('X', ModBlocks.PALE_PLANKS)
+                .criterion(hasItem(ModBlocks.PALE_PLANKS),conditionsFromItem(ModBlocks.PALE_PLANKS))
                 .offerTo(exporter);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlock.PALE_PRESSURE_PLATE)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.PALE_PRESSURE_PLATE)
                 .pattern("RR")
-                .input('R', ModBlock.PALE_PLANKS)
-                .criterion(hasItem(ModBlock.PALE_PLANKS),conditionsFromItem(ModBlock.PALE_PLANKS))
+                .input('R', ModBlocks.PALE_PLANKS)
+                .criterion(hasItem(ModBlocks.PALE_PLANKS),conditionsFromItem(ModBlocks.PALE_PLANKS))
                 .offerTo(exporter);
 
 
@@ -218,12 +212,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
 
 
-        FabricRecipeProvider.createDoorRecipe(ModBlock.PALE_DOOR, Ingredient.ofItems(ModBlock.PALE_PLANKS.asItem()))
-                .criterion(hasItem(ModBlock.PALE_PLANKS),conditionsFromItem(ModBlock.PALE_PLANKS))
+        FabricRecipeProvider.createDoorRecipe(ModBlocks.PALE_DOOR, Ingredient.ofItems(ModBlocks.PALE_PLANKS.asItem()))
+                .criterion(hasItem(ModBlocks.PALE_PLANKS),conditionsFromItem(ModBlocks.PALE_PLANKS))
                 .offerTo(exporter);
 
-        FabricRecipeProvider.createTrapdoorRecipe(ModBlock.PALE_TRAPDOOR, Ingredient.ofItems(ModBlock.PALE_PLANKS.asItem()))
-                .criterion(hasItem(ModBlock.PALE_PLANKS),conditionsFromItem(ModBlock.PALE_PLANKS))
+        FabricRecipeProvider.createTrapdoorRecipe(ModBlocks.PALE_TRAPDOOR, Ingredient.ofItems(ModBlocks.PALE_PLANKS.asItem()))
+                .criterion(hasItem(ModBlocks.PALE_PLANKS),conditionsFromItem(ModBlocks.PALE_PLANKS))
                 .offerTo(exporter);
 
 

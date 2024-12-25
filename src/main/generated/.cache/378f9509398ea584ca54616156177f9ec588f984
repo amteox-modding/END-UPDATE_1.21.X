@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-23T16:14:39.282663766	Tutorial Mod/Block Loot Tables
+// 1.21.1	2024-12-25T20:30:17.372724295	Tutorial Mod/Block Loot Tables
 fbcda4da21f0501b4fb8671b74a4bda3d8d18bd9 data/tutorialmod/loot_table/blocks/pale_button.json
 4026b4a3220a9d12ce14b90b7898fd996e11477b data/tutorialmod/loot_table/blocks/pale_planks.json
 260904ae154288fc425b14d4d9abb8ce680b1890 data/tutorialmod/loot_table/blocks/enderium_ore.json
@@ -6,12 +6,14 @@ da35bf048ce252f0052590fac6cc4b2c64b5d359 data/tutorialmod/loot_table/blocks/pale
 1950dc5c4546a8ae7586f8c3520893c1aeb8aeed data/tutorialmod/loot_table/blocks/pale_slab.json
 9ef3438950de3a9372f53dd02b995f05a0cab8b0 data/tutorialmod/loot_table/blocks/pale_fence_gate.json
 15d93faf7bb6e31c9de768218a81e78ed36829a8 data/tutorialmod/loot_table/blocks/stripped_pale_log.json
+91e5e76d3be76a6217e0c6f96be427ec8b2573c3 data/tutorialmod/loot_table/blocks/pale_sapling.json
 78609889d1cf3a2112116afca2c8f610a40a4f5d data/tutorialmod/loot_table/blocks/pale_wood.json
 edb50b2615674fdc46f507e28070a83e1dd37de8 data/tutorialmod/loot_table/blocks/pale_fence.json
 d29f411dd412556c567b6ae066bb31e9a33cab64 data/tutorialmod/loot_table/blocks/pale_pressure_plate.json
 4c61dc00b2e57121f08c2710cc89eeb74f3d7950 data/tutorialmod/loot_table/blocks/end_magic_block.json
 4b83e710e380ff5df5d999cd895906db69fec84a data/tutorialmod/loot_table/blocks/enderium_block.json
 e4e86eab98248eff179dfac44c6457b97b7324dd data/tutorialmod/loot_table/blocks/end_stone_pale_grass_block.json
+a8c4989faacab8a31f763b07efa6c13d42c05f23 data/tutorialmod/loot_table/blocks/pale_leaves.json
 093b53908c5efea90a2236504e95bf935e897e89 data/tutorialmod/loot_table/blocks/pale_stairs.json
 2ba0dde0b6dcaa24315e0af137d31ed411e33972 data/tutorialmod/loot_table/blocks/end_stone_pillar.json
 97d0a8c85cae13d8752ced1e103d6ab0d6b6759b data/tutorialmod/loot_table/blocks/pale_log.json

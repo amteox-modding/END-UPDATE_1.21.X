@@ -28,6 +28,7 @@ repositories {
 	maven { url "https://ladysnake.jfrog.io/artifactory/mods" }
 	maven { url = "https://dvs1.progwml6.com/files/maven/" }
 	maven { url = "https://modmaven.dev" }
+	maven { url = 'https://maven.minecraftforge.net/' }
 
 
 
@@ -45,10 +46,11 @@ dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-//	modImplementation "org.betterx:bclib:${project.bclib_version}"
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	modImplementation 'com.github.glitchfiend:TerraBlender-fabric:1.21.1-4.1.0.5'
+
 
 
 }

@@ -1,8 +1,8 @@
-// 1.21.1	2024-12-23T16:14:39.280618876	Tutorial Mod/Tags for minecraft:item
+// 1.21.1	2024-12-25T20:30:17.371650475	Tutorial Mod/Tags for minecraft:item
 a7f260f01fb96a5203f5c8f31f94e7c4e898c5b1 data/minecraft/tags/item/wool.json
 480ef7df676b0b2db20f48f1834a836a905d6f1c data/minecraft/tags/item/hoes.json
 f03fe9411d781b4d21adb03db639e63459cf4865 data/minecraft/tags/item/swords.json
-36742fdddd2d67e5d78f1c16f32128854311849d data/minecraft/tags/item/planks.json
+7975d29b47992b7e30ce7b7288f3e2df0db26f2d data/minecraft/tags/item/planks.json
 bf0c305e44cf3594f9c4c2a0934b5a22be083556 data/minecraft/tags/item/stone_bricks.json
 b0661f6daf62133ff0dcdf11a07795f4c53f108e data/minecraft/tags/item/pickaxes.json
 dc4635a1911e40ec9fdfb9622d02576d629abb43 data/minecraft/tags/item/shovels.json

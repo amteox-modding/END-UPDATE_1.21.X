@@ -2,7 +2,9 @@ package net.amteox.tutorialmod.block;
 
 import net.amteox.tutorialmod.TutorialMod;
 import net.amteox.tutorialmod.block.custom.MagicBlock;
+import net.amteox.tutorialmod.block.custom.ModSaplingBlock;
 import net.amteox.tutorialmod.plants.PaleCrops;
+import net.amteox.tutorialmod.world.tree.ModSaplingGenerators;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -14,7 +16,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 
-public class ModBlock {
+public class ModBlocks {
 
 
 
@@ -39,7 +41,7 @@ public class ModBlock {
     //Wyroby
 
     public static final Block PALE_STAIRS = registerBlock("pale_stairs",
-            new StairsBlock(ModBlock.PALE_PLANKS.getDefaultState(),
+            new StairsBlock(ModBlocks.PALE_PLANKS.getDefaultState(),
             AbstractBlock.Settings.create().strength(2f).requiresTool().sounds(BlockSoundGroup.WOOD)));
 
     public static final Block PALE_SLAB = registerBlock("pale_slab",
@@ -70,6 +72,8 @@ public class ModBlock {
     public static final Block PALE_LEAVES = registerBlock("pale_leaves",
             new Block(AbstractBlock.Settings.create().strength(1f).requiresTool().nonOpaque().sounds(BlockSoundGroup.AZALEA_LEAVES)));
 
+    public static final Block PALE_SAPLING = registerBlock("pale_sapling",
+            new ModSaplingBlock(ModSaplingGenerators.PALEWOOD,AbstractBlock.Settings.copy(Blocks.OAK_SAPLING),Blocks.END_STONE));
 
     public static final Block PALE_GRASS = registerBlock("pale_grass",
             new PaleCrops(AbstractBlock.Settings.copy(Blocks.SHORT_GRASS).nonOpaque().noCollision()));
@@ -100,12 +104,6 @@ public class ModBlock {
 
 
 
-//    public static final Block CRUSHING_STATION_BLOCK = registerBlock("crushing_station_block",
-//            new Block(AbstractBlock.Settings.create().strength(2f).requiresTool()));
-
-
-
-
     private static Block registerBlock(String name, Block block){
         registerBlocksItem(name,block);
         return Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID,name), block);
@@ -125,9 +123,9 @@ public class ModBlock {
         TutorialMod.LOGGER.info("Registering Mod Blocks for" + TutorialMod.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-            entries.add(ModBlock.END_STONE_PALE_BLOCK);
-            entries.add(ModBlock.PALE_LOG);
-            entries.add(ModBlock.PALE_WOOD);
+            entries.add(ModBlocks.END_STONE_PALE_BLOCK);
+            entries.add(ModBlocks.PALE_LOG);
+            entries.add(ModBlocks.PALE_WOOD);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(entries -> {

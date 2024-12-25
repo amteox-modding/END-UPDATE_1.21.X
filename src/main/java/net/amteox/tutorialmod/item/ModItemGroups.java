@@ -1,7 +1,7 @@
 package net.amteox.tutorialmod.item;
 
 import net.amteox.tutorialmod.TutorialMod;
-import net.amteox.tutorialmod.block.ModBlock;
+import net.amteox.tutorialmod.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -14,36 +14,36 @@ public class ModItemGroups {
 
     public static final ItemGroup END_UPDATE_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(TutorialMod.MOD_ID, "end_update_blocks"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlock.END_STONE_PALE_BLOCK))
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.END_STONE_PALE_BLOCK))
                     .displayName(Text.translatable("itemgroup.tutorialmod.end_update_blocks"))
                     .entries((displayContext, entries) -> {
-                      entries.add(ModBlock.END_STONE_PALE_BLOCK);
-                      entries.add(ModBlock.PALE_LOG);
-                      entries.add(ModBlock.PALE_WOOD);
-                      entries.add(ModBlock.STRIPPED_PALE_LOG);
-                      entries.add(ModBlock.STRIPPED_PALE_WOOD);
-                      entries.add(ModBlock.PALE_PLANKS);
+                      entries.add(ModBlocks.END_STONE_PALE_BLOCK);
+                      entries.add(ModBlocks.PALE_LOG);
+                      entries.add(ModBlocks.PALE_WOOD);
+                      entries.add(ModBlocks.STRIPPED_PALE_LOG);
+                      entries.add(ModBlocks.STRIPPED_PALE_WOOD);
+                      entries.add(ModBlocks.PALE_PLANKS);
 
 
-                      entries.add(ModBlock.PALE_STAIRS);
-                      entries.add(ModBlock.PALE_SLAB);
-                      entries.add(ModBlock.PALE_BUTTON);
-                      entries.add(ModBlock.PALE_PRESSURE_PLATE);
-                      entries.add(ModBlock.PALE_FENCE);
-                      entries.add(ModBlock.PALE_FENCE_GATE);
-                      entries.add(ModBlock.PALE_DOOR);
-                      entries.add(ModBlock.PALE_TRAPDOOR);
-                      entries.add(ModBlock.ENDERIUM_ORE);
-                      entries.add(ModBlock.ENDERIUM_BLOCK);
-                        entries.add(ModBlock.PALE_LEAVES);
-
-                        entries.add(ModBlock.PALE_GRASS);
-                        entries.add(ModBlock.PALE_BUSH);
-                        entries.add(ModBlock.PALE_ROOT);
-                        entries.add(ModBlock.PALE_ROOTS);
-                        entries.add(ModBlock.PALE_STEM);
-                        entries.add(ModBlock.END_MAGIC_BLOCK);
-                        entries.add(ModBlock.END_STONE_PILLAR);
+                      entries.add(ModBlocks.PALE_STAIRS);
+                      entries.add(ModBlocks.PALE_SLAB);
+                      entries.add(ModBlocks.PALE_BUTTON);
+                      entries.add(ModBlocks.PALE_PRESSURE_PLATE);
+                      entries.add(ModBlocks.PALE_FENCE);
+                      entries.add(ModBlocks.PALE_FENCE_GATE);
+                      entries.add(ModBlocks.PALE_DOOR);
+                      entries.add(ModBlocks.PALE_TRAPDOOR);
+                      entries.add(ModBlocks.ENDERIUM_ORE);
+                      entries.add(ModBlocks.ENDERIUM_BLOCK);
+                        entries.add(ModBlocks.PALE_LEAVES);
+                        entries.add(ModBlocks.PALE_SAPLING);
+                        entries.add(ModBlocks.PALE_GRASS);
+                        entries.add(ModBlocks.PALE_BUSH);
+                        entries.add(ModBlocks.PALE_ROOT);
+                        entries.add(ModBlocks.PALE_ROOTS);
+                        entries.add(ModBlocks.PALE_STEM);
+                        entries.add(ModBlocks.END_MAGIC_BLOCK);
+                        entries.add(ModBlocks.END_STONE_PILLAR);
 
 
                     }).build());
